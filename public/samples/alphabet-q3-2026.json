@@ -1,0 +1,500 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "Alphabet",
+    "company": "Alphabet Inc.",
+    "ticker": "NASDAQ: GOOGL · GOOG",
+    "period": "Q3 2026",
+    "currency": "USD",
+    "unit": "millions",
+    "source": {
+      "file": "source/2026q3-alphabet-earnings-release.pdf",
+      "label": "Alphabet Q3 2026 earnings release",
+      "notes": [
+        "Released Oct 28, 2026 · unaudited · figures in USD.",
+        "YoY = year over year. Map regions are approximate country groupings (map data: Natural Earth)."
+      ]
+    },
+    "website": {
+      "url": "https://abc.xyz/investor",
+      "label": "Investor site"
+    }
+  },
+  "views": [
+    {
+      "id": "overview",
+      "type": "overview",
+      "title": "Overview",
+      "icon": "overview",
+      "subtitle": "Earnings overview · quarter ended September 30, 2026",
+      "quote": {
+        "text": "Now on a half-trillion dollar revenue run rate",
+        "author": "Sundar Pichai"
+      },
+      "periods": [
+        {
+          "id": "quarter",
+          "label": "Quarter",
+          "tag": "Q3 2026",
+          "compare": "vs Q3 2025",
+          "metrics": {
+            "revenue": {
+              "cur": 127577,
+              "prev": 102346
+            },
+            "operatingIncome": {
+              "cur": 40576,
+              "prev": 31228
+            },
+            "netIncome": {
+              "cur": 26170,
+              "prev": 34979
+            },
+            "eps": {
+              "cur": 2.12,
+              "prev": 2.87
+            }
+          }
+        },
+        {
+          "id": "ytd",
+          "label": "Year to date",
+          "tag": "9M 2026",
+          "compare": "vs 9M 2025",
+          "metrics": {
+            "revenue": {
+              "cur": 357269,
+              "prev": 289007
+            },
+            "operatingIncome": {
+              "cur": 121042,
+              "prev": 93105
+            },
+            "netIncome": {
+              "cur": 200855,
+              "prev": 97715
+            },
+            "eps": {
+              "cur": 16.33,
+              "prev": 7.99
+            }
+          }
+        }
+      ],
+      "hero": {
+        "title": "Total Revenue",
+        "metric": "revenue"
+      },
+      "mix": {
+        "label": "Q3 2026 revenue mix by segment",
+        "items": [
+          {
+            "name": "Google Services",
+            "value": 96302
+          },
+          {
+            "name": "Google Cloud",
+            "value": 30709
+          },
+          {
+            "name": "Other Bets",
+            "value": 372
+          }
+        ]
+      },
+      "insight": {
+        "title": "Cloud Doubled",
+        "text": "Google Cloud revenue grew **103%** to $30.7B, and its operating income tripled to $11.1B on demand for AI infrastructure and TPU systems.",
+        "action": {
+          "label": "Explore segment profit",
+          "view": "breakdown",
+          "tab": "segments"
+        }
+      },
+      "tiles": {
+        "title": "Key Metrics",
+        "link": {
+          "label": "Balance sheet",
+          "view": "balance"
+        },
+        "items": [
+          {
+            "label": "Operating income",
+            "metric": "operatingIncome",
+            "format": "money"
+          },
+          {
+            "label": "Operating margin",
+            "ratio": [
+              "operatingIncome",
+              "revenue"
+            ],
+            "format": "percent"
+          },
+          {
+            "label": "Net income",
+            "metric": "netIncome",
+            "format": "money"
+          },
+          {
+            "label": "Diluted EPS",
+            "metric": "eps",
+            "format": "perShare"
+          }
+        ]
+      }
+    },
+    {
+      "id": "revenue",
+      "type": "widgets",
+      "title": "Revenue",
+      "icon": "bars",
+      "subtitle": "Revenue by product line and segment · Q3 2026",
+      "widgets": [
+        {
+          "type": "ranking",
+          "title": "Revenue Lines",
+          "aside": "Q3 · YoY",
+          "items": [
+            {
+              "name": "Google Search & other",
+              "sub": "Google Services",
+              "cur": 63350,
+              "prev": 56567,
+              "icon": "search"
+            },
+            {
+              "name": "Google Cloud",
+              "sub": "Google Cloud",
+              "cur": 30709,
+              "prev": 15157,
+              "icon": "cloud"
+            },
+            {
+              "name": "Subscriptions, platforms & devices",
+              "sub": "Google Services",
+              "cur": 14290,
+              "prev": 12870,
+              "icon": "device"
+            },
+            {
+              "name": "YouTube ads",
+              "sub": "Google Services",
+              "cur": 11207,
+              "prev": 10261,
+              "icon": "play"
+            },
+            {
+              "name": "Google Network",
+              "sub": "Google Services",
+              "cur": 7455,
+              "prev": 7354,
+              "icon": "network"
+            },
+            {
+              "name": "Other Bets",
+              "sub": "Other Bets",
+              "cur": 372,
+              "prev": 344,
+              "icon": "spark"
+            }
+          ]
+        },
+        {
+          "type": "shares",
+          "title": "Revenue by Segment",
+          "aside": "Q3 2026 vs Q3 2025",
+          "shareLabel": "of segment revenue",
+          "items": [
+            {
+              "name": "Google Services",
+              "text": "Search, YouTube, Android, Chrome, devices, subscriptions",
+              "cur": 96302,
+              "prev": 87052
+            },
+            {
+              "name": "Google Cloud",
+              "text": "GCP, Workspace, AI infrastructure and TPU systems",
+              "cur": 30709,
+              "prev": 15157
+            },
+            {
+              "name": "Other Bets",
+              "text": "Autonomous transportation and internet services",
+              "cur": 372,
+              "prev": 344
+            }
+          ],
+          "note": "Segments add up to $127.4B. Hedging gains of $194M (Q3 2025: −$207M) are not part of any segment, which brings total revenue to $127.6B."
+        }
+      ]
+    },
+    {
+      "id": "breakdown",
+      "type": "widgets",
+      "title": "Breakdown",
+      "icon": "trend",
+      "subtitle": "Cash flow, geography and segment profit · Q3 2026",
+      "widgets": [
+        {
+          "type": "tabs",
+          "tabs": [
+            {
+              "id": "cashflow",
+              "label": "Cash flow",
+              "chart": "gapLines",
+              "title": "Cash flow by quarter",
+              "note": "The gap between the two lines is free cash flow (p.8)",
+              "description": "Operating cash flow versus capital expenditures by quarter",
+              "x": [
+                "Q4 2025",
+                "Q1 2026",
+                "Q2 2026",
+                "Q3 2026"
+              ],
+              "lines": [
+                {
+                  "name": "Operating cash flow",
+                  "values": [
+                    52402,
+                    45790,
+                    39069,
+                    42290
+                  ]
+                },
+                {
+                  "name": "Capital expenditures",
+                  "short": "Capex",
+                  "values": [
+                    27851,
+                    35674,
+                    44924,
+                    51355
+                  ]
+                }
+              ],
+              "gap": {
+                "name": "Free cash flow",
+                "short": "FCF"
+              },
+              "stats": [
+                {
+                  "label": "Free cash flow · last 4 quarters",
+                  "value": 19747,
+                  "sub": "Two negative quarters in a row"
+                },
+                {
+                  "label": "Capex · Q3 2026",
+                  "value": 51355,
+                  "prev": 23953,
+                  "compare": "vs Q3 2025",
+                  "showPrev": true
+                },
+                {
+                  "label": "Operating cash flow · Q3 2026",
+                  "value": 42290,
+                  "prev": 48414,
+                  "compare": "vs Q3 2025"
+                }
+              ]
+            },
+            {
+              "id": "geography",
+              "label": "Geography",
+              "chart": "geo",
+              "title": "Revenue by geography",
+              "note": "Q3 2026, as reported. Map regions are approximate (p.9)",
+              "description": "World map of Q3 2026 revenue by region",
+              "sizeLabel": "Q3 2026 revenue",
+              "shareLabel": "of revenue",
+              "regions": [
+                {
+                  "key": "us",
+                  "name": "United States",
+                  "cur": 67681,
+                  "prev": 48758,
+                  "cc": 39
+                },
+                {
+                  "key": "emea",
+                  "name": "EMEA",
+                  "cur": 32695,
+                  "prev": 29911,
+                  "cc": 10
+                },
+                {
+                  "key": "apac",
+                  "name": "APAC",
+                  "cur": 19906,
+                  "prev": 17819,
+                  "cc": 15
+                },
+                {
+                  "key": "americas",
+                  "name": "Other Americas",
+                  "cur": 7101,
+                  "prev": 6065,
+                  "cc": 15
+                }
+              ]
+            },
+            {
+              "id": "segments",
+              "label": "Segment profit",
+              "chart": "slope",
+              "title": "Operating income by segment",
+              "note": "Q3 2025 → Q3 2026. Alphabet-level = mainly shared AI R&D (p.7)",
+              "description": "Operating income by segment, Q3 2025 to Q3 2026",
+              "from": "Q3 2025",
+              "to": "Q3 2026",
+              "items": [
+                {
+                  "name": "Google Services",
+                  "color": "var(--series-2)",
+                  "cur": 39157,
+                  "prev": 33527,
+                  "revenue": {
+                    "cur": 96302,
+                    "prev": 87052
+                  }
+                },
+                {
+                  "name": "Google Cloud",
+                  "color": "var(--series-3)",
+                  "cur": 11121,
+                  "prev": 3594,
+                  "revenue": {
+                    "cur": 30709,
+                    "prev": 15157
+                  }
+                },
+                {
+                  "name": "Other Bets",
+                  "color": "#b9a4b4",
+                  "cur": -2047,
+                  "prev": -1426
+                },
+                {
+                  "name": "Alphabet-level",
+                  "color": "var(--neg)",
+                  "cur": -7655,
+                  "prev": -4467
+                }
+              ],
+              "lossNote": {
+                "label": "Losses widened",
+                "text": "Mostly AI research costs."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "balance",
+      "type": "widgets",
+      "title": "Balance sheet",
+      "icon": "scale",
+      "subtitle": "Financial position · Dec 31, 2025 → Sep 30, 2026",
+      "widgets": [
+        {
+          "type": "balance",
+          "title": "Balance Sheet",
+          "from": "Dec 31, 2025",
+          "to": "Sep 30, 2026",
+          "summary": [
+            {
+              "label": "Total assets",
+              "cur": 1003312,
+              "prev": 595281,
+              "note": "since Dec 31, 2025"
+            },
+            {
+              "label": "Net cash",
+              "cur": 139996,
+              "prev": 80296,
+              "note": "cash & securities − long-term debt"
+            },
+            {
+              "label": "Stockholders' equity",
+              "cur": 677549,
+              "prev": 415265,
+              "note": "since Dec 31, 2025"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Total assets",
+              "cur": 1003312,
+              "prev": 595281
+            },
+            {
+              "name": "Cash & marketable securities",
+              "cur": 265098,
+              "prev": 126843
+            },
+            {
+              "name": "Property & equipment, net",
+              "cur": 372827,
+              "prev": 246597
+            },
+            {
+              "name": "Long-term debt",
+              "cur": 125102,
+              "prev": 46547
+            },
+            {
+              "name": "Stockholders' equity",
+              "cur": 677549,
+              "prev": 415265
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "highlights",
+      "type": "widgets",
+      "title": "Highlights",
+      "icon": "star",
+      "subtitle": "What moved the quarter · Q3 2026",
+      "widgets": [
+        {
+          "type": "notes",
+          "title": "What Moved the Quarter",
+          "count": {
+            "label": "employees",
+            "cur": 204757,
+            "prev": 190167
+          },
+          "items": [
+            {
+              "title": "Equity securities loss",
+              "value": "−$8.7B",
+              "tone": "neg",
+              "text": "Turned other income negative (−$8.2B) and cut EPS by $0.55. That is why net income fell while operating income rose 30%."
+            },
+            {
+              "title": "Capex",
+              "value": "$51.4B",
+              "tone": "neutral",
+              "text": "Up from $24.0B a year ago, more than OCF. Free cash flow was −$9.1B in Q3."
+            },
+            {
+              "title": "New funding",
+              "value": "$41.1B",
+              "tone": "neutral",
+              "text": "$28.7B in senior notes plus $12.4B of stock sold through the ATM program. No buybacks this quarter."
+            },
+            {
+              "title": "Dividend",
+              "value": "$0.22",
+              "tone": "pos",
+              "text": "Quarterly per share on Class A, B and C stock, payable December 14, 2026."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

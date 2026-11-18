@@ -1,0 +1,21 @@
+{
+  "name": "insights-dashboard",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Upload a file (Excel, CSV, JSON, PDF, Word, image) and get an interactive dashboard.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check-ai": "node server/check-ai.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3",
+    "mammoth": "^1.13.0",
+    "multer": "^2.5.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}

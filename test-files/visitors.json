@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "week": "2025-W01",
+      "visitors": 1200,
+      "signups": 85
+    },
+    {
+      "week": "2025-W02",
+      "visitors": 1340,
+      "signups": 91
+    },
+    {
+      "week": "2025-W03",
+      "visitors": 1290,
+      "signups": 88
+    },
+    {
+      "week": "2025-W04",
+      "visitors": 1510,
+      "signups": 120
+    }
+  ]
+}

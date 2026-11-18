@@ -1,0 +1,78 @@
+/* Review view only. Uses the design tokens from styles.css; nothing in styles.css is overridden. */
+.review__intro p { line-height: 1.55; }
+.review__intro b { color: var(--text); font-weight: 600; }
+
+.review__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; font-size: 13.5px; color: var(--muted); }
+.review__controls label { display: inline-flex; align-items: center; gap: 8px; }
+.review__spacer { flex: 1; }
+.review__controls .btn-glow { margin-top: 0; border: 0; cursor: pointer; font: inherit; color: var(--text); }
+.review__controls .btn-glow:disabled { opacity: 0.6; cursor: progress; }
+
+/* Form controls in the dark theme */
+.review__controls select,
+.review__head select,
+.review__name,
+.review__table input {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 7px 10px;
+  transition: border-color 0.2s;
+}
+.review__controls select:focus,
+.review__head select:focus,
+.review__name:focus,
+.review__table input:focus { outline: none; border-color: var(--accent); }
+
+.review__card.is-off { opacity: 0.5; }
+.review__head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 12px; }
+.review__name { flex: 1 1 220px; min-width: 0; font-size: 16px; font-weight: 500; }
+.review__include { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--muted); cursor: pointer; }
+.review__include input { accent-color: var(--accent); width: 16px; height: 16px; }
+
+.review__notes { list-style: none; padding: 0; margin: 0 0 12px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.review__notes li::before { content: "●"; margin-right: 8px; font-size: 9px; vertical-align: 2px; }
+.review__notes li.warn { color: var(--accent); }
+
+/* Editable table: scrolls sideways inside the card on small screens */
+.review__scroll { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+.review__table { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.review__table th,
+.review__table td { padding: 4px 6px; border-bottom: 1px solid var(--border); text-align: left; }
+.review__table tr:last-child td { border-bottom: 0; }
+.review__table th { background: var(--surface-2); font-weight: 500; color: var(--muted); }
+.review__table input { width: 100%; min-width: 96px; padding: 6px 8px; border-color: transparent; background: transparent; }
+.review__table td:first-child input,
+.review__table th:first-child input { min-width: 160px; }
+.review__table input:hover { border-color: var(--border); }
+.review__table td.is-flagged input { border-color: var(--neg); background: rgba(240, 123, 134, 0.1); }
+.review__total td { color: var(--muted); font-weight: 600; padding: 9px 14px; background: rgba(255, 255, 255, 0.02); }
+.review__mark { width: 52px; text-align: center !important; font-size: 12px; }
+
+.review__cost,
+.review__del {
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.review__cost { margin: 0 auto; }
+.review__cost.is-on { color: var(--neg); border-color: var(--neg); background: rgba(240, 123, 134, 0.12); }
+.review__del:hover { color: var(--neg); border-color: var(--neg); }
+.review__cost:focus-visible,
+.review__del:focus-visible,
+.review__include input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 520px) {
+  .review__controls { align-items: stretch; }
+  .review__controls label { justify-content: space-between; width: 100%; }
+  .review__spacer { display: none; }
+  .review__controls .pill, .review__controls .btn-glow { flex: 1; justify-content: center; text-align: center; }
+}

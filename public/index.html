@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insights Dashboard</title>
+  <meta name="description" content="Interactive dashboard built from a financial report." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="upload.css" />
+  <link rel="stylesheet" href="review.css" />
+</head>
+<body>
+  <!-- App shell. Sidebar, top bar, footer and every data view are built by js/app.js
+       from a Dashboard JSON file (see samples/alphabet-q3-2026.json). -->
+  <div class="frame">
+    <aside class="sidebar"></aside>
+
+    <main class="main">
+      <header class="topbar"></header>
+
+      <!-- ===== View: Upload (static) ===== -->
+      <section class="view" data-view="upload" data-static aria-label="Upload file" tabindex="-1" hidden>
+        <div class="grid grid--revenue">
+          <article class="card">
+            <div class="card__head">
+              <h2>Upload a File</h2>
+              <span class="muted small">Excel · CSV · JSON · PDF · Word · Image</span>
+            </div>
+            <label class="upload__drop" data-ref="drop">
+              <input class="upload__input" type="file" accept=".xlsx,.xls,.csv,.json,.pdf,.docx,.png,.jpg,.jpeg,.webp,.txt,.md" data-ref="file" />
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 20h14" /></svg>
+              <strong>Drop your file here</strong>
+              <span class="muted small">or</span>
+              <span class="btn-glow">Choose file</span>
+              <span class="muted small">Spreadsheets, PDF, Word (.docx) or images · up to 10 MB</span>
+            </label>
+            <p class="upload__status" data-ref="status" role="status" aria-live="polite"></p>
+            <div class="pills">
+              <button class="pill" type="button" data-ref="reopen" hidden>Review the last upload</button>
+              <button class="pill" type="button" data-ref="sample">Show the Alphabet example</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__head">
+              <h2>How It Works</h2>
+            </div>
+            <ul class="notes">
+              <li>
+                <strong>Spreadsheets: read exactly</strong>
+                <p>Excel, CSV and JSON are read by code, so the numbers match your file. Best with a header row, a column of labels or dates, and number columns.</p>
+              </li>
+              <li>
+                <strong>PDF, Word and images: read by AI</strong>
+                <p>Google Gemini finds the tables. You check and fix them on the review screen before the dashboard is built.</p>
+              </li>
+              <li>
+                <strong>Private</strong>
+                <p>Files are read in memory and never stored. Documents are sent to Gemini to be read. Your last dashboard stays in this browser.</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== View: Review the numbers (static; filled by js/review.js) ===== -->
+      <section class="view" data-view="review" data-static aria-label="Review the numbers" tabindex="-1" hidden></section>
+
+      <!-- ===== View: How to use (static) ===== -->
+      <section class="view" data-view="help" data-static aria-label="How to use" tabindex="-1" hidden>
+        <div class="help-grid">
+          <article class="card help">
+            <span class="help__step">1</span>
+            <h2>Move between screens</h2>
+            <p>Use the menu on the left (on phones, the menu at the top). Each item opens its own screen. Your browser's back button works, and every screen has its own link you can share.</p>
+          </article>
+          <article class="card help">
+            <span class="help__step">2</span>
+            <h2>Upload your own file</h2>
+            <p>Open <b>Upload file</b> and drop a spreadsheet, PDF, Word file or image. For documents you first <b>review the numbers</b> (fix cells, remove tables), then the dashboard is built.</p>
+          </article>
+          <article class="card help">
+            <span class="help__step">3</span>
+            <h2>Overview</h2>
+            <p>The main figure and key metrics, compared with the previous period. When there are several periods, switch them with the buttons at the top.</p>
+          </article>
+          <article class="card help">
+            <span class="help__step">4</span>
+            <h2>Charts and lists</h2>
+            <p>Pick a tab above a chart and hover a point or region for details. Sort lists by <b>Largest</b> or <b>Fastest growing</b>.</p>
+          </article>
+          <article class="card help">
+            <span class="help__step">5</span>
+            <h2>Reading the colours</h2>
+            <p><span class="pos">Green</span> = growth, <span class="neg">red</span> = decline or loss, <span class="accent">pink</span> = change that is neither good nor bad. YoY = vs the same period last year; cc = constant currency.</p>
+          </article>
+          <article class="card help">
+            <span class="help__step">6</span>
+            <h2>Check the source</h2>
+            <p>Every figure comes from the source file. Hover <b>Source</b> at the bottom for notes, and double-check important numbers.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer muted small"></footer>
+    </main>
+  </div>
+
+  <script src="world-map.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

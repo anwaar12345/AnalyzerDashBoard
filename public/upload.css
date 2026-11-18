@@ -1,0 +1,30 @@
+/* Upload view only. Uses the design tokens from styles.css; nothing in styles.css is overridden. */
+.upload__drop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 220px;
+  padding: 28px 20px;
+  text-align: center;
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, opacity 0.2s;
+}
+.upload__drop svg { width: 34px; height: 34px; color: var(--accent); }
+.upload__drop strong { font-size: 17px; font-weight: 600; }
+.upload__drop .btn-glow { margin-top: 2px; }
+.upload__drop:hover,
+.upload__drop.is-over { border-color: var(--accent); background: rgba(226, 169, 210, 0.06); }
+.upload__drop:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.upload__drop.is-busy { opacity: 0.55; pointer-events: none; }
+
+/* Visually hidden but still reachable by keyboard and screen readers */
+.upload__input { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+
+.upload__status { min-height: 20px; margin: 14px 0; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.upload__status b { color: var(--text); font-weight: 600; }
